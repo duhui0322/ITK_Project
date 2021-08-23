@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.itk_project.mapper.BoardMapper">
+   
+    <!-- 게시판 글쓰기  -->
+	<insert id="writeBoard" >
+		insert into board values(board_seq.nextval,#{btitle},#{bcontent},board_seq.currval,0,0,'1.jpg',sysdate,#{member_idx})
+	</insert>
+	<!--게시판 가져오기  -->
+	<resultMap type="com.site.itk_project.vo.MemberVo" id="memberMap">
+		<result column="member_idx" property="member_idx"/>
+		<result column="member_name" property="member_name"/>
+	</resultMap>
+	<resultMap type="com.site.itk_project.vo.BoardVo" id="boardMap">
+		<result column="bid" property="bid"/>
+		<result column="btitle" property="btitle"/>
+		<result column="bcontent" property="bcontent"/>
+		<result column="bgroup" property="bgroup"/>
+		<result column="bstep" property="bstep"/>
+		<result column="bindent" property="bindent"/>
+		<result column="bupload" property="bupload"/>
+		<result column="bdate" property="bdate"/>
+		<result column="member_idx" property="member_idx"/>
+	</resultMap>
+	<resultMap type="com.site.itk_project.vo.BBean" id="bBeanMap">
+		<collection property="boardVo" resultMap="boardMap"/>
+		<collection property="memberVo" resultMap="memberMap"/>
+	</resultMap>
+	<select id="selectBoard" resultMap="bBeanMap">
+	<![CDATA[
+		select * from board b join member m using(member_idx)
+	]]>
+	</select>
+</mapper>
