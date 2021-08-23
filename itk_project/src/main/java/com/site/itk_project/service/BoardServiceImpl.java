@@ -30,4 +30,12 @@ public class BoardServiceImpl implements BoardService {
 		return map;
 		
 	}
+
+	@Override
+	public Map<String, Object> selectBordView(int bid) {
+		Map<String,Object> map = new HashMap<String,Object>();
+		BBean bBean = boardMapper.selectBoardView(bid);
+		map.put("bBean", bBean);
+		return map;
+	}
 }

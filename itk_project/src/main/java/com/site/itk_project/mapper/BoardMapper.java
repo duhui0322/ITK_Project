@@ -14,4 +14,6 @@ public interface BoardMapper {
 
 	ArrayList<BBean> selectBoard();
 
+	BBean selectBoardView(int bid);
+
 }
