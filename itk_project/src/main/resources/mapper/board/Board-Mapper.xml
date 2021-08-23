@@ -13,6 +13,7 @@
 		<result column="member_idx" property="member_idx"/>
 		<result column="member_name" property="member_name"/>
 	</resultMap>
+	
 	<resultMap type="com.site.itk_project.vo.BoardVo" id="boardMap">
 		<result column="bid" property="bid"/>
 		<result column="btitle" property="btitle"/>
@@ -24,10 +25,12 @@
 		<result column="bdate" property="bdate"/>
 		<result column="member_idx" property="member_idx"/>
 	</resultMap>
+	
 	<resultMap type="com.site.itk_project.vo.BBean" id="bBeanMap">
 		<collection property="boardVo" resultMap="boardMap"/>
 		<collection property="memberVo" resultMap="memberMap"/>
 	</resultMap>
+	
 	<select id="selectBoard" resultMap="bBeanMap">
 	<![CDATA[
 		select * from board b join member m using(member_idx)
