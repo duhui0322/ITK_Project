@@ -10,4 +10,6 @@ public interface BoardService {
 
 	Map<String, Object> selectBoard();
 
+	Map<String, Object> selectBordView(int bid);
+
 }

@@ -20,18 +20,17 @@
 	<body>
 		<table>
 			<tr>
-				<th>No</th>
 				<th>제목</th>
+				<th>내용</th>
 				<th>작성자</th>
 				<th>작성일</th>
 			</tr>
 			<c:forEach items="${map.list }" var = "all">
 			<tr>
-				<td>${all.boardVo.bid}</td>
-				<td><a href = "boardView?bid=${all.boardVo.bid }">${all.boardVo.btitle }</a></td>
+				<td>${all.boardVo.btitle }</td>
+				<td>${all.boardVo.bcontent }</td>
 				<td>${all.memberVo.member_name }</td>
 				<td>${all.boardVo.bdate }</td>
-				<!-- bhit추가해야함 -->
 			</tr>
 			</c:forEach>
 		</table>

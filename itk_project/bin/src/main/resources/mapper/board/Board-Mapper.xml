@@ -33,9 +33,4 @@
 		select * from board b join member m using(member_idx)
 	]]>
 	</select>
-	<select id="selectBoardView" resultMap="bBeanMap">
-	<![CDATA[
-		select * from board b join member m using(member_idx) where bid = #{bid}
-	]]>
-	</select>
 </mapper>
