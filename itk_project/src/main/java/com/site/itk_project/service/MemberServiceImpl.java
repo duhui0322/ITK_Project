@@ -17,4 +17,11 @@ public class MemberServiceImpl implements MemberService {
 		memberMapper.memberJoin(memberVo);
 	}
 
+
+	@Override
+	public MemberVo selectMemberOne(MemberVo memberVo) {
+		MemberVo mVo = memberMapper.selectMemberOne(memberVo);
+		return mVo;
+	}
+
 }

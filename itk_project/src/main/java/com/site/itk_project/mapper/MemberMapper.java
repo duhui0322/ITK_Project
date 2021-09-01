@@ -9,4 +9,6 @@ public interface MemberMapper {
 
 	void memberJoin(MemberVo memberVo);
 
+	MemberVo selectMemberOne(MemberVo memberVo);
+
 }

@@ -64,7 +64,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>6</version>
 			<scope>system</scope>
-			<systemPath>C:\Users\JMP\git\ITK_Project\itk_project\src\main\webapp\WEB-INF\lib\ojdbc6_g.jar</systemPath>
+			<systemPath>C:\Users\th386\git\ITK_Project\itk_project\src\main\webapp\WEB-INF\lib\ojdbc6_g.jar</systemPath>
 		</dependency>
 	</dependencies>
 
