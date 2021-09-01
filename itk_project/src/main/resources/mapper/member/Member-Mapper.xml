@@ -6,7 +6,7 @@
    
     <!-- 회원가입  -->
     <insert id="memberJoin">
-    	insert into member values(mem_seq.nextval,#{member_id},#{member_pw),#{member_name},#{member_nickname},0,'y','y','y');
+    	insert into member values(mem_seq.nextval,#{member_id},#{member_pw},#{member_name},#{member_nickname},0,'y','y','y')
     </insert>
 	
 
