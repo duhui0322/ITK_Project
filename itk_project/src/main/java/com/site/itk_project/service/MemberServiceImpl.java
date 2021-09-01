@@ -10,17 +10,11 @@ import com.site.itk_project.vo.MemberVo;
 public class MemberServiceImpl implements MemberService {
 	@Autowired
 	MemberMapper memberMapper;
-	
-	@Override
-	public int joinMember(MemberVo memberVo) {
-		int joinResult = memberMapper.joinMember(memberVo); 
-		return joinResult;
-	}
+
 
 	@Override
-	public MemberVo loginMember(String member_id, String member_pw) {
-			MemberVo memberVo = memberMapper.loginMember(member_id,member_pw);
-		return memberVo;
+	public void memberJoin(MemberVo memberVo) {
+		memberMapper.memberJoin(memberVo);
 	}
 
 }
